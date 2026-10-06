@@ -3,7 +3,3 @@ command:
   - "run"
   - "uvicorn"
   - "app.app:app"
-  - "--host"
-  - "$UVICORN_HOST"
-  - "--port"
-  - "$UVICORN_PORT"
