@@ -5,5 +5,5 @@ command:
   - "app.app:app"
   - "--host"
   - "$UVICORN_HOST"
-  - "port"
+  - "--port"
   - "$UVICORN_PORT"
