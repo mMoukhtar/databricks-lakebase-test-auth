@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 
+from app.api.router import app_router
+
 app = FastAPI(
     title="Test Databricks - Lakebase Auth",
     version="0.0.1",
@@ -7,6 +9,9 @@ app = FastAPI(
 )
 
 
-@app.get("/healthy")
-def healthy_check():
-    return {"healthy": "ok"}
+app.include_router(app_router)
+
+
+@app.get("")
+def root():
+    return {"This is the app root"}
